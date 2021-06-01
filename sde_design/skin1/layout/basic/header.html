@@ -1,0 +1,90 @@
+
+<div id="header" class="cboth">
+	<div class="inner">
+		<div class="hadertest">
+			<div class="header_sec01 cboth" id="comment_top">
+				<div class="top_logo">
+		      <a href="/"><img src="/web/upload/img/logo.png"></a>
+		    </div>
+				<div class="topmenu_area"><!-- 상단 메뉴 수정하는곳 -->
+						<div id="category" module="Layout_category">
+							<!--@js(/js/module/layout/category.js)-->
+							<div class="position"><!-- 좌측 카테고리 자동출력 -->
+								<ul>
+									<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+									<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+									<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+								</ul>
+							</div>
+						</div><!-- //Layout_category -->
+
+				</div><!-- //topmenu_area -->
+				<div class="top_search_area">
+					<ul class="userLogin">
+						<li module="Layout_statelogoff" class="userLogin_button">
+		          <a href="/member/login.html">LOGIN</a>
+		          <div class="userLogin_join">
+		            <ul>
+		              <li><a href="/member/join.html">JOIN US</a></li>
+		              <li><a href="/myshop/order/list.html">주문조회</a></li>
+		              <li><a href="/myshop/index.html">마이쇼핑</a></li>
+		            </ul>
+		          </div>
+		        </li>
+						<li module="Layout_stateLogon" class="userLogout_button">
+		          <a href="{$action_logout}">LOGOUT</a>
+		          <div class="userLogin_out">
+		            <ul>
+		              <li><a href="/myshop/index.html">MY PAGE</a></li>
+		              <li><a href="/myshop/order/list.html">주문조회</a></li>
+		              <li><a href="/myshop/index.html">마이쇼핑</a></li>
+		            </ul>
+		          </div>
+		        </li>
+						<li><a href="/order/basket.html"><i class="xi-cart-o"></i> <span module="Layout_orderBasketcount">{$basket_count}</span></a></li>
+						<li class="last"><a href="#" id="icon_search"><img src="/images/search.png"></a></li>
+					</ul>
+				</div><!-- //top_search_area -->
+			</div><!-- //header_sec01 -->
+
+			<div id="quick_search">
+				<div class="quick_searchClose"><img src="/images/icon_close_search.png" class="rotate"></div>
+				<div module="Layout_SearchHeader">
+					<!--
+					$product_page=/product/detail.html
+					$category_page=/product/list.c
+					-->
+					<fieldset>
+						<legend>검색</legend>
+						{$form.keyword}<img src="/images/icon_search_btn.png" alt="검색" class="search_btn" onclick="{$action_search_submit}"/>
+					</fieldset>
+				</div>
+			</div><!-- //quick_search -->
+
+			<div module="board_listpackage_8" id="notice">
+	      <div class="inner">
+	        <h2>공지사항</h2>
+	        <div class="ec-base-table typeList gLine">
+	            <ul border="1" summary=""  module="board_list_8" id="rollingNotice">
+	                <!--
+	                    $count = 3
+	                    $main_list = yes
+	                    $subject_cut = 50
+	                    $main_list_reply_view = no
+	                -->
+	                <li>
+	                    <strong class="title"><span class="objHidden">제목</span><a href="{$link_board_detail}">{$subject}</a></strong>
+	                    <span><span class="objHidden">날짜</span>{$write_date|date:y-m-d}</span>
+	                </li>
+	                <li>
+	                    <strong class="title"><span class="objHidden">제목</span><a href="{$link_board_detail}">{$subject}</a></strong>
+	                    <span><span class="objHidden">날짜</span>{$write_date|date:y-m-d}</span>
+	                </li>
+	            </ul>
+	        </div>
+	      </div>
+	    </div>
+
+		</div>
+	</div>
+</div><!-- //header -->
