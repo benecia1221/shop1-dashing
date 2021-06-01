@@ -49,6 +49,18 @@
  * 문서 구동후 시작
  */
 $(document).ready(function(){
+
+    $("#icon_search").click(function(){
+
+      $("#quick_search").fadeIn();
+
+    });
+
+    $(".quick_searchClose").click(function(){
+
+      $("#quick_search").fadeOut();
+
+    });
     $('#banner:visible, #quick:visible').floatBanner();
 
     //placeholder
@@ -178,5 +190,3 @@ function returnTagetName(_this){
     //preventDefault 는 a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용됨.
     e.preventDefault();
 });
-
-

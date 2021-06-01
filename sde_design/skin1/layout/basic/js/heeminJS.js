@@ -18,7 +18,7 @@ jb(document).ready(function(){
         dots : true,
           // fade: true, /* 슬라이드가 아닌 fade효과처리*/
         });
-
+ 
 
 });
 
